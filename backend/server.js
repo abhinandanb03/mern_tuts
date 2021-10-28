@@ -5,11 +5,11 @@ const cors = require('cors');
 const exercisesRouter = require("./routes/exercises.js");
 const usersRouter = require("./routes/users.js");
 
+app.use(express.json())
 app.use(cors())
 require('dotenv').config();
 
 var port = process.env.PORT||4000;
-
 
 
 const uri = process.env.ATLAS_URI;
